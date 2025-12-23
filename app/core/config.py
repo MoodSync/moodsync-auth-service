@@ -5,7 +5,7 @@ import os
 
 class Settings(BaseSettings):
     # App
-    APP_NAME: str = "FastAPI Auth OTP"
+    APP_NAME: str = "Moodsync Auth API"
     APP_VERSION: str = "1.0.0"
     DEBUG: bool = False
     ALLOWED_ORIGINS: List[str] = ["http://localhost:3000"]
