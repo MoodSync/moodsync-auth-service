@@ -47,8 +47,19 @@ class Settings(BaseSettings):
     @property
     def async_database_url(self) -> str:
         if self.DATABASE_URL:
-            return self.DATABASE_URL.replace("postgresql://", "postgresql+asyncpg://")
-        return f"postgresql+asyncpg://{self.POSTGRES_USER}:{self.POSTGRES_PASSWORD}@{self.POSTGRES_HOST}:{self.POSTGRES_PORT}/{self.POSTGRES_DB}"
+            return self.DATABASE_URL.replace(
+                "postgresql://",
+                "postgresql+asyncpg://"
+            )
+
+        return (
+            f"postgresql+asyncpg://"
+            f"{self.POSTGRES_USER}:"
+            f"{self.POSTGRES_PASSWORD}@"
+            f"{self.POSTGRES_HOST}:"
+            f"{self.POSTGRES_PORT}/"
+            f"{self.POSTGRES_DB}"
+    )
     
     class Config:
         env_file = ".env"
