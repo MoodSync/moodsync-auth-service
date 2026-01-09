@@ -7,7 +7,7 @@ def custom_openapi():
         return app.openapi_schema
     
     openapi_schema = get_openapi(
-        title="Auth API",
+        title="Moodsync Auth API",
         version="1.0.0",
         description="Authentication API with OTP verification",
         routes=app.routes,

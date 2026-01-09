@@ -12,10 +12,10 @@ class Settings(BaseSettings):
     
     # Database
     DATABASE_URL: Optional[str] = None
-    POSTGRES_DB: str = "moodsync_auth_db"
-    POSTGRES_USER: str = "postgres"
-    POSTGRES_PASSWORD: str = "root"
-    POSTGRES_HOST: str = "localhost"
+    POSTGRES_DB: str = "moodsync_database"
+    POSTGRES_USER: str = "moodsync_admin"
+    POSTGRES_PASSWORD: str = "HLbBdZhQvOuymunx7htnQT96JTCLEEJ1"
+    POSTGRES_HOST: str = "postgresql://moodsync_admin:HLbBdZhQvOuymunx7htnQT96JTCLEEJ1@dpg-d5gjjg7fte5s73fmfb4g-a/moodsync_database"
     POSTGRES_PORT: str = "5432"
     
     # JWT
